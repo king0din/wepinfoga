@@ -1,0 +1,16 @@
+CREATE TABLE IF NOT EXISTS links (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    tracking_id TEXT UNIQUE NOT NULL,
+    sender_telegram_id INTEGER NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS collected_data (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    link_id INTEGER NOT NULL,
+    ip_address TEXT NOT NULL,
+    user_agent TEXT NOT NULL,
+    collected_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (link_id) REFERENCES links(id)
+);
+
