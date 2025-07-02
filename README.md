@@ -22,8 +22,8 @@ Telegram botu ile entegre bir web sunucusu sistemi. Bot, kullanıcılar için be
 
 ### 1. Projeyi Klonlayın
 ```bash
-git clone https://github.com/king0din/gigaprocect.git
-cd gigaprocect
+git clone https://github.com/king0din/wepinfoga.git
+cd wepinfoga
 ```
 
 ### 2. Web Sunucusunu Kurun
