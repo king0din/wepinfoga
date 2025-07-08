@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilgi Toplama Botu - Ana Sayfa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            width: 90%;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .logo {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .feature {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .feature h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        
+        .feature p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            line-height: 1.4;
+        }
+        
+        .warning {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+            color: #2d3436;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border-left: 5px solid #e17055;
+        }
+        
+        .warning h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .warning p {
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+        
+        .telegram-info {
+            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+        
+        .telegram-info h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .telegram-info p {
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        
+        .status {
+            background: linear-gradient(135deg, #00b894 0%, #00a085 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 30px;
+            font-weight: 600;
+        }
+        
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background: #00ff88;
+            border-radius: 50%;
+            margin-right: 10px;
+            animation: blink 1.5s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.3; }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+                margin: 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .logo {
+                font-size: 3rem;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🤖</div>
+        <h1>Bilgi Toplama Botu</h1>
+        <p class="subtitle">
+            Güvenli ve etik bilgi toplama sistemi. Telegram botu ile entegre çalışır.
+        </p>
+        
+        <div class="features">
+            <div class="feature">
+                <span class="feature-icon">🔗</span>
+                <h3>Takip Bağlantıları</h3>
+                <p>Benzersiz takip bağlantıları oluşturun ve paylaşın</p>
+            </div>
+            
+            <div class="feature">
+                <span class="feature-icon">🛡️</span>
+                <h3>Güvenli Veri Toplama</h3>
+                <p>Yalnızca IP adresi ve tarayıcı bilgisi toplanır</p>
+            </div>
+            
+            <div class="feature">
+                <span class="feature-icon">✅</span>
+                <h3>Rıza Tabanlı</h3>
+                <p>Kullanıcı onayı olmadan hiçbir veri toplanmaz</p>
+            </div>
+        </div>
+        
+        <div class="warning">
+            <h3>⚠️ Önemli Uyarı</h3>
+            <p>
+                Bu sistem yalnızca yasal ve etik amaçlar için kullanılmalıdır. 
+                Kişisel veri koruma yasalarına uygun hareket etmek kullanıcının sorumluluğundadır.
+            </p>
+        </div>
+        
+        <div class="telegram-info">
+            <h3>📱 Telegram Botu Kullanımı</h3>
+            <p><strong>Başlangıç:</strong> Telegram'da botunuza /start komutu gönderin</p>
+            <p><strong>Bağlantı Oluştur:</strong> /link_olustur komutu ile yeni takip bağlantısı oluşturun</p>
+            <p><strong>Verileri Görüntüle:</strong> /bilgilerim komutu ile toplanan verileri kontrol edin</p>
+        </div>
+        
+        <div class="status">
+            <span class="status-indicator"></span>
+            Web Sunucusu Aktif ve Çalışıyor
+        </div>
+    </div>
+</body>
+</html>
+
